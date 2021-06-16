@@ -1,4 +1,5 @@
 //Em processo de construção
+alert("Atenção: Estamos em desenvolvimento!")
 var nomeAluno = document.getElementById("nome");
 
 var alunos = [{ 
