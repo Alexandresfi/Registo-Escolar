@@ -137,3 +137,17 @@ button>a{
 section{
     display: none;
 }
+
+.desenvolvedor{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+.Nasci{
+    margin-right: 20px;
+}
+.Nasci>p{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:springgreen
+}
