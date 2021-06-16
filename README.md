@@ -6,3 +6,4 @@ Os professores não precisarão mais fazer chamadas, colocar notas e os obejetiv
 Este site também armazena as notas de cada alunos referente a cada trimeste e ainda calcular a média parcial dos trimestres e a anual, tudo isso de forma automatizada.
 ATENÇÃO: O site ainda está passando por alguns ajustes, pois ainda não aprendi a fazer determinadas coisas, como por exemplo, fazer com que as páginas: cadastro e faltas sejam liagas e tudo que for feito no script de uma, seja feito ou usado no script da outra.
 Vale lembrar quem todas as páginas estão com um mesmo arquivo Javascript.
+Veja o projeto funcionando em: https://relatorioescolar.netlify.app/
