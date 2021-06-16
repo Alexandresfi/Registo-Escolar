@@ -9,8 +9,8 @@ header{
     text-align: center;
     width: 500px;
     margin: auto;
-    margin-top: 20%;
-    margin-bottom: calc(20% - 300px);
+    margin-top: 10%;
+    margin-bottom: calc(10% - 300px);
     background-color: brown;
 }
 
@@ -20,8 +20,8 @@ header{
     align-items: center;
     text-align: center;
     justify-content: space-around;
-    margin-top: 20%;
-    margin-bottom: calc(20% - 400px);
+    margin-top: 10%;
+    margin-bottom: calc(10% - 400px);
 }
 
 .ca{
@@ -67,8 +67,8 @@ header{
 }
 
 .cadastro{
-    margin-top: 15%;
-    margin-bottom: calc(20% - 400px);
+    margin-top: 7.5%;
+    margin-bottom: calc(10% - 400px);
     background-color: brown;
     display: none;
 }
@@ -84,8 +84,8 @@ header{
 }
 
 .frequencia{
-    margin-top: 10%;
-    margin-bottom: calc(20% - 400px);
+    margin-top: 2.5%;
+    margin-bottom: calc(10% - 400px);
     display: none;
 }
 
@@ -120,14 +120,14 @@ select{
 }
 
 table{
-    border: black 4px solid;
+    border: rgb(221, 9, 9) 4px solid;
     border-radius: 5px;
     margin: auto;
     margin-bottom: 20px;
 }
 
 td{
-    border: black 3px solid;
+    border: rgb(230, 11, 11) 3px solid;
     border-radius: 5px;
     padding: 5px;
 }
@@ -146,6 +146,7 @@ section{
 }
 .Nasci{
     margin-right: 20px;
+    
 }
 .Nasci>p{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
