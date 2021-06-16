@@ -1,4 +1,4 @@
-alet("ATENÇÃO: Estamos em desenvolvimento")
+alert("ATENÇÃO: Estamos em desenvolvimento")
 var nomeAluno = document.getElementById("nome");
 
 var alunos = [];
