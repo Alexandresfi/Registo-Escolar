@@ -1,23 +1,7 @@
-//Em processo de construção
-alert("Atenção: Estamos em desenvolvimento!")
+alet("ATENÇÃO: Estamos em desenvolvimento")
 var nomeAluno = document.getElementById("nome");
 
-var alunos = [{ 
-    nome: "José Alexandre do Nascimento",
-    notas1: [10, 10, 10],
-    notas2: [10, 10, 10,],
-    notas3: [10, 10, 10],
-    media: function () {
-       return (this.notas1[0] + this.notas2[0]+this.notas3[0])/3}},
-    {
-    nome: "Isa Viviane",
-    notas1: [10, 10, 10],
-    notas2: [10, 10, 10,],
-    notas3: [10, 10, 10],
-    media: function () {
-        (this.notas1[0] + this.notas2[0]+this.notas3[0])/3;
-    }
-}];
+var alunos = [];
 
 let nomes = []; //lista de chamada em ordem alfabética, para colocar quando as turmas estiverem prontas
 
@@ -32,8 +16,6 @@ function CriarAluno () {
             return (this.notas1[0] + this.notas2[0]+this.notas3[0])/3
         }
     }
-
-    
     alunos.push(Aluno);
     nomeAluno.focus(); 
     var {nome}=aluno;
@@ -44,7 +26,6 @@ function CriarAluno () {
 
 function MostrarAluno() {
 
-    
     let tabela = document.getElementById("aqui");
     //Para faltas (de td1 a td3)
     let tr = document.createElement("tr");
@@ -52,14 +33,14 @@ function MostrarAluno() {
     let td2 = document.createElement("td");
     let td3 = document.createElement("td");
 
-
     let pos = alunos.indexOf(aluno);
     
     let numero = document.createTextNode(pos);
+    
     td1.appendChild(numero);    
     //adicionando os texto de cada parte da tabela
     td2.textContent = nomeAluno.value;
-    td1.textContent = pos+2; //esse 2 é temporário
+    td1.textContent = pos;
     td3.innerHTML = '<input type="checkbox" name="falta" value="falta">';
 
     //adicionando os elementos da tabela
@@ -84,25 +65,30 @@ function AddNotas(){
     let td3 = document.createElement("td");
     let td4 = document.createElement("td");
     let td5 = document.createElement("td");
-    let td6 = document.createElement("td");   
-    //criando os inputs para as notas
-    let inpute = document.createElement("input");
+    var td6 = document.createElement("td");
 
     let pos = alunos.indexOf(aluno);
-    
+        
     let numero = document.createTextNode(pos);
     td1.appendChild(numero);  
-
     
     //colocando os inpuit
-    td3.innerHTML = "<input type= 'number' name=notas class='menor' placeholder='nota'>"
-    td4.innerHTML = "<input type= 'number' name=notas class='menor' placeholder='nota'>"
-    td5.innerHTML = "<input type= 'number' name=notas class='menor' placeholder='nota'>"
-    td6.innerHTML = "<input type= 'number' name=notas class='menor' placeholder='nota'>"
-
-
+    td3.innerHTML = `<input type= number name=notas class='nota ${pos}'  placeholder=nota>`
+    td4.innerHTML = `<input type= number name=notas class='nota ${pos}'  placeholder=nota>`
+    td5.innerHTML = `<input type= number name=notas class='nota ${pos}'  placeholder=nota>`
+    
+    //calculando médias do Trimestre.
+    document.getElementById("media").addEventListener("click",()=>{
+        let nota1=parseInt(document.getElementsByClassName("nota "+ pos)[0].value);
+        let nota2=parseInt(document.getElementsByClassName("nota "+ pos)[1].value);
+        let nota3=parseInt(document.getElementsByClassName("nota "+ pos)[2].value);
+        let media = (nota1+nota2+nota3)/3;
+        td6.innerHTML = `<input type= number name=notas class='nota ${pos}'  placeholder=nota value = '${media}'>`
+        console.log(document.getElementsByClassName("nota "+ pos)[0].value)
+    })
+    
     //números e nomes dos alunos
-    td1.textContent = pos +2;
+    td1.textContent = pos;
     td2.textContent = nomeAluno.value;
     tabelaNota.appendChild(tr);
     tr.appendChild(td1);
@@ -112,7 +98,6 @@ function AddNotas(){
     tr.appendChild(td5);
     tr.appendChild(td6);
 }
-
 
     document.getElementById("entrar").addEventListener("click",function(){
     document.getElementById("cabeca").style.display = "none";
@@ -154,6 +139,9 @@ document.getElementById("voltaPr").addEventListener("click", function(){
 })
 
 document.getElementById("levaN").addEventListener("click",function(){
+    if(alunos==0){
+        alert("Por favor, cadestre pelo menos um aluno!")
+    }
     document.getElementById("coisa1").style.display = "none";
     document.getElementById("notas").style.display = "block";
     document.getElementById("notas1").style.display = "block";
