@@ -1,5 +1,5 @@
 body{
-    background-color:red;
+    background-color:rgb(12, 11, 11);
     color: white;
 }
 
@@ -20,7 +20,6 @@ header{
     align-items: center;
     text-align: center;
     justify-content: space-around;
-    background-color: rgba(238, 8, 8, 0.603);
     margin-top: 20%;
     margin-bottom: calc(20% - 400px);
 }
@@ -28,7 +27,7 @@ header{
 .ca{
     width: 250px;
     height: 100px;
-    border:black 5px solid;
+    border:rgba(0, 0, 0, 0.055) 5px solid;
     border-radius: 10px;
     margin-top: 10px;
     padding: 5px;
@@ -71,6 +70,7 @@ header{
     margin-top: 15%;
     margin-bottom: calc(20% - 400px);
     background-color: brown;
+    display: none;
 }
 
 .frequencia>div{
@@ -86,11 +86,13 @@ header{
 .frequencia{
     margin-top: 10%;
     margin-bottom: calc(20% - 400px);
+    display: none;
 }
 
-.faltas,.notas,.relatorio{
+.faltas,.notas,.relatorio,.intro{
     margin: auto;
     text-align: center;   
+    display: none;
 }
 
 h1{
@@ -102,6 +104,10 @@ input{
     padding: 4px;
     margin: 5px;
     margin-top: 10px;
+}
+
+.menor{
+    width: 40px;
 }
 
 a{
@@ -127,4 +133,7 @@ td{
 }
 button>a{
     color: black;
+}
+section{
+    display: none;
 }
