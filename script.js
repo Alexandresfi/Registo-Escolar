@@ -40,7 +40,7 @@ function MostrarAluno() {
     td1.appendChild(numero);    
     //adicionando os texto de cada parte da tabela
     td2.textContent = nomeAluno.value;
-    td1.textContent = pos;
+    td1.textContent = pos+1;
     td3.innerHTML = '<input type="checkbox" name="falta" value="falta">';
 
     //adicionando os elementos da tabela
@@ -88,7 +88,7 @@ function AddNotas(){
     })
     
     //números e nomes dos alunos
-    td1.textContent = pos;
+    td1.textContent = pos+1;
     td2.textContent = nomeAluno.value;
     tabelaNota.appendChild(tr);
     tr.appendChild(td1);
