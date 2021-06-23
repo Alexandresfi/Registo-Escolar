@@ -1,6 +1,6 @@
 body{
-    background-color:rgb(12, 11, 11);
-    color: white;
+    background-color: #2b2d42;
+    color: #edf2f4;
 }
 
 header{
@@ -11,7 +11,7 @@ header{
     margin: auto;
     margin-top: 10%;
     margin-bottom: calc(10% - 300px);
-    background-color: brown;
+    background-color: #d80032;
 }
 
 .container{
@@ -106,7 +106,7 @@ input{
     margin-top: 10px;
 }
 
-.nota{
+.nota,.T{
     width: 40px;
 }
 
@@ -134,6 +134,14 @@ td{
 button>a{
     color: black;
 }
+
+button{
+    height: 25px;
+    background-color: rgba(216, 185, 185, 0.89);
+    border-radius: 5px;
+    border-style: none;
+}
+
 section{
     display: none;
 }
@@ -150,5 +158,44 @@ section{
 }
 .Nasci>p{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:springgreen
+    color:rgb(246, 250, 20);
+}
+
+.shake-bottom {
+	-webkit-animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4;
+	animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4;
+}
+
+@-webkit-keyframes shake-bottom {
+    0%,
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+    }
+    10% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: rotate(-4deg);
+              transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+      -webkit-transform: rotate(4deg);
+              transform: rotate(4deg);
+    }
+    80% {
+      -webkit-transform: rotate(-2deg);
+              transform: rotate(-2deg);
+    }
+    90% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
 }
