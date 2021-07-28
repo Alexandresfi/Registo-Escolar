@@ -1,0 +1,40 @@
+body{
+  background-color: #2b2d42;
+  color: #edf2f4;
+}
+
+input{
+  outline: none;
+  margin-right: 5px;
+}
+
+.notas{
+  width: 55px;
+  text-align: center;
+}
+
+.notasR{
+ width: 80px;
+ text-align: center;
+}
+
+a{text-decoration: none; color:black}
+
+.frequencia{
+    margin-top: 5vh;
+    margin-bottom: calc(10% - 400px);
+}
+
+.frequencia>h3{text-align: center;}
+
+select{
+  padding: 2.5px;
+  margin-right: 10px;
+}
+
+button{
+  margin: 5px 5px;
+  height: 20px;
+  border-radius: 6px;
+  border-style: none;
+}
